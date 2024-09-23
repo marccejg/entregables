@@ -12,15 +12,16 @@ let calcularPuntaje = (a: number, b: number, c: number): number => {
 ///////////////////////////////////////////////////////////////////
 //determina ganador
 
-for (let i: number = 1; i <= participante; i++) {
+
+
+let determinarGanador = (participante: number, nota: number): number => {
+    for (let i: number = 1; i <= participante; i++) {
     let particOrden = i
     let sabor: number = fs.questionInt("ingrese puntaje por sabor: ");
     let presentacion: number = fs.questionInt("ingrese puntaje por presentacion: ");
     let dificultad: number = fs.questionInt("ingrese puntaje por dificultad: ");
     let pteNota = calcularPuntaje(sabor, presentacion, dificultad);
 }
-
-let determinarGanador = (participante: number, nota: number): number => {
 
     return 1;
 
