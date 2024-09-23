@@ -14,16 +14,25 @@ let calcularPuntaje = (a: number, b: number, c: number): number => {
 
 
 
-let determinarGanador = (participante: number, nota: number): number => {
+let determinarGanador = (): any => {
+    let notaMayor:number=0;
+   
+    
     for (let i: number = 1; i <= participante; i++) {
     let particOrden = i
     let sabor: number = fs.questionInt("ingrese puntaje por sabor: ");
     let presentacion: number = fs.questionInt("ingrese puntaje por presentacion: ");
     let dificultad: number = fs.questionInt("ingrese puntaje por dificultad: ");
     let pteNota = calcularPuntaje(sabor, presentacion, dificultad);
+    if (pteNota > notaMayor) {
+        notaMayor = pteNota;
+    }else {notaMayor};
+  
 }
+    return notaMayor;
 
-    return 1;
+
 
 }
-
+let ganador = determinarGanador()
+console.log(ganador);
