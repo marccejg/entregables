@@ -8,7 +8,7 @@ let participante: number = fs.questionInt("Ingrese cantidad de participantes: ")
 
 ////////determinar puntaje entre 0 y 5
 let determinarPuntaje = (a:number): void =>  {
-    while (a <= 0 && a >=5 )
+    while (a < 0 && a >5 )
     {
         console.log("El valor debe ser entre mayor que 0 y menor o igual a 5");
     };
