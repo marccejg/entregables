@@ -1,11 +1,7 @@
 console.clear();
 import * as fs from 'readline-sync';
-
-
 /////////////////////////////////////////////////////////////
-
 let participante: number = fs.questionInt("Ingrese cantidad de participantes: ");
-
 ////////determinar puntaje entre 0 y 5
 let determinarPuntaje = (a:number): void =>  {
     while (a < 0 && a >5 )
@@ -18,13 +14,11 @@ let calcularPuntaje = (a: number, b: number, c: number): number => {
     let suma: number = (a + b + c);
     return suma;
 };
-
 ///////////////////////////////////////////////////////////////////
 //determina ganador
-
 let determinarGanador = (): any => {
     let notaMayor:number=0;
-    let ganador:number=0; 
+    let ganador:any=0; 
     for (let i: number = 1; i <= participante; i++) {
     let particOrden = i
     console.log("Notas particitante",i);
@@ -38,11 +32,10 @@ let determinarGanador = (): any => {
     if (pteNota > notaMayor) {
         notaMayor = pteNota;
         ganador = i;
-    }else {
-        notaMayor;
-    };  
+    } else {ganador ="empate"}
 }
     return ganador;
 }
+////////////////////////////////////////////////////////////////////
 let ganador = determinarGanador()
-console.log("El ganadro es el participanta Nº",ganador);
+console.log("el ganador de la competencia es",ganador);
