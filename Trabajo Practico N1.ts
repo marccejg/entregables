@@ -32,7 +32,7 @@ let determinarGanador = (): void => {
     let dificultad: number = fs.questionInt("ingrese puntaje por dificultad: ");
     determinarPuntaje(dificultad);
     let pteNota = calcularPuntaje(sabor, presentacion, dificultad);
-    if (pteNota >= notaMayor) {
+    if (pteNota > notaMayor) {
         notaMayor = pteNota;
         ganador = i;
     } else {ganador ="empate"};
