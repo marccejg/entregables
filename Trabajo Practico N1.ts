@@ -1,5 +1,7 @@
 console.clear();
 import * as fs from 'readline-sync';
+
+
 /////////////////////////////////////////////////////////////
 let participante: number = fs.questionInt("Ingrese cantidad de participantes: ");
 //calcula el puntaje
