@@ -50,7 +50,5 @@ let determinarGanador = (): void => {
 }
 let ganador = determinarGanador()
 console.log("el ganador de la competencia es", ganador);
-
 }
-let ganador = determinarGanador()
-console.log("el ganador de la competencia es",ganador);
+
