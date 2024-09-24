@@ -44,11 +44,12 @@ let determinarGanador = (): number => {
         if (pteNota > notaMayor) {
             notaMayor = pteNota;
             ganador = i;
-        } else {ganador= "empate"}
-    
+        } else if(pteNota==notaMayor){
+            ganador ="empate";
+        }    
 
 }
     return ganador;
 }
-let ganador = determinarGanador()
-console.log("el ganador de la competencia es", ganador);
+let resultado = determinarGanador()
+console.log("el ganador de la competencia es", resultado);
