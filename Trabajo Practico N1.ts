@@ -18,7 +18,7 @@ let calcularPuntaje = (a: number, b: number, c: number): number => {
 /////////////////////determina ganador/////////
 //////////////////////////////////////////////
 
-let determinarGanador = (): void => {
+let determinarGanador = (): number => {
     let notaMayor: number = 0;
     let ganador: any = 0;
 
@@ -40,12 +40,14 @@ let determinarGanador = (): void => {
         };
         let pteNota = calcularPuntaje(sabor, presentacion, dificultad);
 
-        let notaMayor: number = 0;
+        
         if (pteNota > notaMayor) {
             notaMayor = pteNota;
             ganador = i;
-        } else { ganador = "empate" };
-    };
+        } else {ganador= "empate"}
+    
+
+}
     return ganador;
 }
 let ganador = determinarGanador()
